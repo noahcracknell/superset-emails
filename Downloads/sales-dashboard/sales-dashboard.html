@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="refresh" content="14400">
+<title>Sales Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #EEEEEE;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-size: 14px;
+    color: #111928;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  @keyframes pulse { 0%,100% { opacity:1 } 50% { opacity:0.35 } }
+</style>
+</head>
+<body>
+
+<!-- ── Top nav ── -->
+<div style="background:#fff;border-bottom:1px solid #E5E7EB;height:52px;display:flex;align-items:center;padding:0 20px;gap:14px;flex-shrink:0">
+  <!-- Logo mark -->
+  <img src="assets/logo-superset.png" alt="Superset" width="28" height="28" style="border-radius:6px">
+  <span style="font-weight:700;font-size:15px;color:#111928;letter-spacing:-0.01em">Superset</span>
+  <div style="width:1px;height:18px;background:#E5E7EB;margin:0 2px"></div>
+  <span style="font-size:13px;color:#6B7280;font-weight:400">Sales Dashboard</span>
+  <div style="margin-left:auto;display:flex;align-items:center;gap:6px;font-size:12px;color:#6B7280">
+    <span style="width:7px;height:7px;border-radius:50%;background:#16A34A;display:inline-block;animation:pulse 2s infinite;flex-shrink:0"></span>
+    Live · auto-refreshes every 4 hours
+  </div>
+</div>
+
+<!-- ── Sub-header ── -->
+<div style="background:#fff;border-bottom:1px solid #E5E7EB;padding:8px 20px;display:flex;align-items:center;gap:16px">
+  <span style="font-size:13px;font-weight:600;color:#111928">Week of Mar 09, 2026</span>
+  <span style="font-size:12px;color:#9CA3AF">Last synced from Attio: Mar 10 2026, 09:09 PM UTC</span>
+</div>
+
+<!-- ── KPI cards ── -->
+<div style="padding:16px 20px 0;display:grid;grid-template-columns:repeat(4,1fr);gap:12px">
+
+  <!-- Card macro via inline blocks -->
+  <div style="background:#fff;border:1px solid #E5E7EB;border-radius:8px;padding:16px 18px"><div style="font-size:11px;font-weight:500;color:#6B7280;text-transform:uppercase;letter-spacing:0.07em">First Contacts Made</div><div style="font-size:32px;font-weight:700;color:#111928;line-height:1.1;margin-top:6px;letter-spacing:-0.02em">1</div><div style="font-size:12px;color:#9CA3AF;margin-top:4px">New prospects added to Attio this week  (prev: 1)</div>
+          <span style="background:#F3F4F6;color:#6B7280;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;display:inline-block;margin-top:6px">— flat</span></div>
+  <div style="background:#fff;border:1px solid #E5E7EB;border-radius:8px;padding:16px 18px"><div style="font-size:11px;font-weight:500;color:#6B7280;text-transform:uppercase;letter-spacing:0.07em">Demos Booked</div><div style="font-size:32px;font-weight:700;color:#111928;line-height:1.1;margin-top:6px;letter-spacing:-0.02em">0</div><div style="font-size:12px;color:#9CA3AF;margin-top:4px">First meetings booked this week  (prev: 0)</div>
+          <span style="background:#F3F4F6;color:#6B7280;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;display:inline-block;margin-top:6px">— no prior data</span></div>
+  <div style="background:#fff;border:1px solid #E5E7EB;border-radius:8px;padding:16px 18px"><div style="font-size:11px;font-weight:500;color:#6B7280;text-transform:uppercase;letter-spacing:0.07em">Avg Deal Value</div><div style="font-size:32px;font-weight:700;color:#111928;line-height:1.1;margin-top:6px;letter-spacing:-0.02em">$7K</div><div style="font-size:12px;color:#9CA3AF;margin-top:4px">All-time Won deals (21 with value)</div></div>
+  <div style="background:#fff;border:1px solid #E5E7EB;border-radius:8px;padding:16px 18px"><div style="font-size:11px;font-weight:500;color:#6B7280;text-transform:uppercase;letter-spacing:0.07em">Close Ratio</div><div style="font-size:32px;font-weight:700;color:#111928;line-height:1.1;margin-top:6px;letter-spacing:-0.02em">60.0%</div><div style="font-size:12px;color:#9CA3AF;margin-top:4px">Won ÷ (Won + Lost)  —  21 won, 14 lost</div></div>
+  <div style="background:#fff;border:1px solid #E5E7EB;border-radius:8px;padding:16px 18px"><div style="font-size:11px;font-weight:500;color:#6B7280;text-transform:uppercase;letter-spacing:0.07em">Avg Cycle Length</div><div style="font-size:32px;font-weight:700;color:#111928;line-height:1.1;margin-top:6px;letter-spacing:-0.02em">162d</div><div style="font-size:12px;color:#9CA3AF;margin-top:4px">Avg days from created → won</div></div>
+  <div style="background:#fff;border:1px solid #E5E7EB;border-radius:8px;padding:16px 18px"><div style="font-size:11px;font-weight:500;color:#6B7280;text-transform:uppercase;letter-spacing:0.07em">New ARR (WoW)</div><div style="font-size:32px;font-weight:700;color:#111928;line-height:1.1;margin-top:6px;letter-spacing:-0.02em">$13K</div><div style="font-size:12px;color:#9CA3AF;margin-top:4px">Week of Mar 09</div>
+          <span style="background:#F3F4F6;color:#6B7280;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;display:inline-block;margin-top:6px">— no prior data</span></div>
+  <div style="background:#fff;border:1px solid #E5E7EB;border-radius:8px;padding:16px 18px"><div style="font-size:11px;font-weight:500;color:#6B7280;text-transform:uppercase;letter-spacing:0.07em">New ARR (MoM)</div><div style="font-size:32px;font-weight:700;color:#111928;line-height:1.1;margin-top:6px;letter-spacing:-0.02em">$13K</div><div style="font-size:12px;color:#9CA3AF;margin-top:4px">March 2026</div>
+          <span style="background:#F3F4F6;color:#6B7280;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;display:inline-block;margin-top:6px">— no prior data</span></div>
+
+  <!-- Open pipeline count -->
+  <div style="background:#fff;border:1px solid #E5E7EB;border-radius:8px;padding:16px 18px">
+    <div style="font-size:11px;font-weight:500;color:#6B7280;text-transform:uppercase;letter-spacing:0.07em">Open Pipeline</div>
+    <div style="font-size:32px;font-weight:700;color:#111928;line-height:1.1;margin-top:6px">5</div>
+    <div style="font-size:12px;color:#9CA3AF;margin-top:4px">Active opportunities</div>
+  </div>
+
+</div>
+
+<!-- ── Opportunities table ── -->
+<div style="margin:12px 20px 20px;background:#fff;border:1px solid #E5E7EB;border-radius:8px;overflow:hidden">
+  <div style="padding:12px 18px;border-bottom:1px solid #F3F4F6;display:flex;align-items:center;justify-content:space-between">
+    <span style="font-size:13px;font-weight:600;color:#111928">Highest Value Opportunities</span>
+    <span style="font-size:12px;color:#9CA3AF">Open deals sorted by value</span>
+  </div>
+  <table style="width:100%;border-collapse:collapse">
+    <thead>
+      <tr style="border-bottom:1px solid #F3F4F6">
+        <th style="text-align:left;padding:9px 18px;font-size:11px;font-weight:500;color:#9CA3AF;text-transform:uppercase;letter-spacing:0.06em">Company / Deal</th>
+        <th style="text-align:right;padding:9px 18px;font-size:11px;font-weight:500;color:#9CA3AF;text-transform:uppercase;letter-spacing:0.06em">Value</th>
+        <th style="text-align:right;padding:9px 18px;font-size:11px;font-weight:500;color:#9CA3AF;text-transform:uppercase;letter-spacing:0.06em">Stage</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom:1px solid #F9FAFB;">
+              <td style="padding:10px 18px;color:#111928;font-weight:500;font-size:13px">RSG Group</td>
+              <td style="padding:10px 18px;color:#137AC9;font-weight:600;font-size:13px;text-align:right">$100K</td>
+              <td style="padding:10px 18px;text-align:right"><span style="background:#FFF7ED;color:#EA580C;font-size:11px;font-weight:500;padding:2px 10px;border-radius:20px;white-space:nowrap">Pipeline</span></td>
+            </tr><tr style="border-bottom:1px solid #F9FAFB;">
+              <td style="padding:10px 18px;color:#111928;font-weight:500;font-size:13px">Pure Gym</td>
+              <td style="padding:10px 18px;color:#137AC9;font-weight:600;font-size:13px;text-align:right">$100K</td>
+              <td style="padding:10px 18px;text-align:right"><span style="background:#FFF7ED;color:#EA580C;font-size:11px;font-weight:500;padding:2px 10px;border-radius:20px;white-space:nowrap">Pipeline</span></td>
+            </tr><tr style="border-bottom:1px solid #F9FAFB;">
+              <td style="padding:10px 18px;color:#111928;font-weight:500;font-size:13px">Vasa Fitness</td>
+              <td style="padding:10px 18px;color:#137AC9;font-weight:600;font-size:13px;text-align:right">$48K</td>
+              <td style="padding:10px 18px;text-align:right"><span style="background:#FFF7ED;color:#EA580C;font-size:11px;font-weight:500;padding:2px 10px;border-radius:20px;white-space:nowrap">Pipeline</span></td>
+            </tr><tr style="border-bottom:1px solid #F9FAFB;">
+              <td style="padding:10px 18px;color:#111928;font-weight:500;font-size:13px">Future Fit</td>
+              <td style="padding:10px 18px;color:#137AC9;font-weight:600;font-size:13px;text-align:right">$48K</td>
+              <td style="padding:10px 18px;text-align:right"><span style="background:#FFF7ED;color:#EA580C;font-size:11px;font-weight:500;padding:2px 10px;border-radius:20px;white-space:nowrap">Pipeline</span></td>
+            </tr><tr style="">
+              <td style="padding:10px 18px;color:#111928;font-weight:500;font-size:13px">Fitness SF</td>
+              <td style="padding:10px 18px;color:#137AC9;font-weight:600;font-size:13px;text-align:right">$40K</td>
+              <td style="padding:10px 18px;text-align:right"><span style="background:#FFF7ED;color:#EA580C;font-size:11px;font-weight:500;padding:2px 10px;border-radius:20px;white-space:nowrap">Pipeline</span></td>
+            </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ── Footer ── -->
+<div style="margin-top:auto;padding:10px 20px;border-top:1px solid #E5E7EB;background:#fff;display:flex;align-items:center;gap:14px;font-size:11px;color:#9CA3AF;flex-shrink:0">
+  <span style="display:flex;align-items:center;gap:5px">
+    <span style="width:6px;height:6px;border-radius:50%;background:#16A34A;display:inline-block;flex-shrink:0"></span>
+    Attio connected
+  </span>
+  <span>Updated: Mar 10 2026, 09:09 PM UTC</span>
+  <span style="margin-left:auto">Run refresh_dashboard.py to force update</span>
+</div>
+
+</body>
+</html>
